@@ -1,8 +1,9 @@
+const { addBlog, getBlog } = require("../controllers/blogController.js")
+
 const router = require("express").Router()
 
 
-router.post('/add', (req,res)=>{
-    res.status(201).json("I am a add route")
-})
+router.post('/addblog', addBlog)
+router.get('/getblog', getBlog)
 
 module.exports = router

@@ -3,6 +3,7 @@ require('dotenv').config()
 const cors = require("cors")
 const bodyParser = require("body-parser")
 const blogRoute = require('./routes/routes.js')
+const Connection = require('./connection/db.js')
 
 
 const app = express()
@@ -15,7 +16,7 @@ app.use(bodyParser.json({ extended: true }))
 
 app.use('/api/blog', blogRoute )
 
-
+Connection
 
 
 app.listen(PORT, ()=>{
