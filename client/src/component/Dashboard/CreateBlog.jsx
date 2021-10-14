@@ -4,13 +4,14 @@ import {
   Input,
   TextareaAutosize,
 } from "@material-ui/core";
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 import { submitBlog } from "../../api/BlogApi";
 
 function CreateBlog() {
   const initialState = { heading: "", description: "" };
   const [data, setData] = useState(initialState);
+  
 
   const onTextChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
