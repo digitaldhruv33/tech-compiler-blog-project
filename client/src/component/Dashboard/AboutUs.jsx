@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Dashboard() {
+function AboutUs() {
     return (
         <div>
-            I am dashboard
+            I am About Us
         </div>
     )
 }
 
-export default Dashboard
+export default AboutUs
