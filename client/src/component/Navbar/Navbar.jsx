@@ -54,9 +54,9 @@ function Navbar() {
           >
             <Typography variant="h6">Create Blog</Typography>{" "}
           </NavLink>
-          <NavLink to="/login" exact>
-            <Typography variant="h6">Login</Typography>{" "}
-          </NavLink>
+          
+            <Typography variant="h6"><NavLink to="/login" exact>Login </NavLink> </Typography>
+          
         </Toolbar>
       </AppBar>
     </div>

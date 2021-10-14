@@ -4,7 +4,7 @@ import {
   Input,
   TextareaAutosize,
 } from "@material-ui/core";
-import React, { useContext } from "react";
+import React from "react";
 import { useState } from "react";
 import { submitBlog } from "../../api/BlogApi";
 
