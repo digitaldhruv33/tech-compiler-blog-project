@@ -1,25 +1,30 @@
-import React from 'react'
-import { useEffect } from 'react'
-import { getAllBlog } from '../../api/BlogApi'
-import { Link, useLocation } from "react-router-dom";
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
+import { getAllBlog } from "../../api/BlogApi";
 
+function Home() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const fetchAllBlog = async () => {
+      let response = await getAllBlog();
+      console.log(response);
+      setData(response);
+    };
+    fetchAllBlog();
+  }, []);
 
-function Dashboard() {
-    const {search} = useLocation()
-
-    useEffect(()=>{
-        const fetchAllBlog = async ()=>{
-           let data =  await getAllBlog()
-           console.log(data)
-        }
-        fetchAllBlog()
-    }, [])
-
-    return (
-        <div>
-            
+  return (
+    <div>
+      {data.map((item) => (
+        <div key={item._id}>
+          {item.date}
+          {item.heading}
+          {item.description}
         </div>
-    )
+      ))}
+    </div>
+  );
 }
 
-export default Dashboard
+export default Home;
