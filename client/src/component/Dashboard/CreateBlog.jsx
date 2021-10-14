@@ -6,7 +6,7 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import { useState } from "react";
-import { submitBlog } from "../../api/BlogApi";
+import { submitBlog } from "../../api/BlogApi.js";
 
 function CreateBlog() {
   const initialState = { heading: "", description: "" };

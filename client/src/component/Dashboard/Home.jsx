@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { getAllBlog } from "../../api/BlogApi";
+import { getAllBlog } from "../../api/BlogApi.js";
 
 function Home() {
   const [data, setData] = useState([]);
