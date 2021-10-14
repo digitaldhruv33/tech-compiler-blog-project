@@ -6,8 +6,8 @@ function Login() {
     return (
         <div>
              <FormControl>
-               <Input placeholder="Enter your email" />
-               <Input placeholder="Enter your password" />
+               <Input placeholder="Enter your email" type="text" />
+               <Input placeholder="Enter your password" type="password" />
                <Button type="submit"> Log In </Button>
            </FormControl>
            <Typography>New here? <Link to='/register'> Create an account </Link></Typography>
